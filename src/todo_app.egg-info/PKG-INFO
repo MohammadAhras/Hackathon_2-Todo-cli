@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: todo-app
+Version: 0.1.0
+Summary: In-Memory Todo CLI Application (Phase I)
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Requires-Dist: pytest>=7.0.0; extra == "test"

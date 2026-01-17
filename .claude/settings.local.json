@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(sp.constitution)",
+      "Bash(powershell -Command \".specify/scripts/powershell/setup-plan.ps1 -Json\")",
+      "Bash(powershell -Command \".specify/scripts/powershell/check-prerequisites.ps1 -Json\")",
+      "Bash(uv run python -m src.todo_app.cli.main view)",
+      "Bash(uv run python src/todo_app/cli/main.py add \"Test task for User Story 1\")",
+      "Bash(uv sync --all-extras)",
+      "Bash(uv pip install -e .)",
+      "Bash(python -m src.todo_app.cli.main add \"Test task for User Story 1\")",
+      "Bash(python -m src.todo_app.cli.main view)",
+      "Bash(uv run pytest tests/unit/models/test_task.py -v)",
+      "Bash(uv run pytest tests/unit/services/test_task_manager.py -v)",
+      "Bash(uv run pytest tests/integration/test_cli.py -v)",
+      "Bash(uv run pytest tests/ -v)",
+      "Bash(python -m src.todo_app.cli.main help)",
+      "Bash(python -m src.todo_app.cli.main add \"Final test task\")"
+    ]
+  }
+}

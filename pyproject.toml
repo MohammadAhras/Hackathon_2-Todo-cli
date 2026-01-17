@@ -1,0 +1,19 @@
+[project]
+name = "todo-app"
+version = "0.1.0"
+description = "In-Memory Todo CLI Application (Phase I)"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+todo = "src.todo_app.cli.main:main"
+
+[project.optional-dependencies]
+test = ["pytest>=7.0.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
